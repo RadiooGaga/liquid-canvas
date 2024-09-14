@@ -1,0 +1,40 @@
+
+/* DESKTOP FIRST */
+
+.divCocktail {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    background-color: black;
+    margin: 60px 0px;
+}
+
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 480px) {
+
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+ 
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    
+}
+
+@media (min-width: 1281px) and (max-width: 1440px) {
+   
+}
+
+
+@media (min-width: 1921px) {
+
+}

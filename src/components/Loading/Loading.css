@@ -1,0 +1,22 @@
+.loading,.noDrinksFound {
+    font-family: var(--rtc--font-family-ultima);
+    color: var(--rtc--color-superlightgreen);
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.noDrinksFound {
+    color: var(--rtc--color-supersoftpink);
+}
+
+
+/* MEDIA QUERIES */
+
+
+@media (max-width: 480px) {
+
+    .loading,.noDrinksFound {
+        font-size: 14px;
+    }
+}
+

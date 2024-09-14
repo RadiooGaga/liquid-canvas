@@ -1,0 +1,270 @@
+/* DESKTOP FIRST */
+
+.aboutCard {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--rtc--color-almostBlack);
+    align-items: start;
+    padding: 35px 40px;
+}
+
+.languageDiv {
+    width: 50%;
+    display: flex;
+    padding-left: 25px;
+    margin: 0px 0px 10px 0px;  
+}
+
+
+.language {
+    width: 35px;
+    height: 35px;
+}
+
+.paragraphDiv {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: justify;
+    width: 100%;
+    padding: 25px;
+    margin: 0px 0px 50px 0px;
+}
+
+.aboutCard > h2 {
+    font-size: 24px;
+    padding: 25px;
+}
+
+.spanish, .english {
+    width: 100%;
+    font-size: 18px;
+    letter-spacing: 1px;
+    
+}
+   
+
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 480px) {
+
+    .aboutCard {
+        padding: 10px;
+    }
+
+    .languageDiv {
+        width: 50%;
+        display: flex;
+        padding-left: 20px;
+        margin: 0px 0px 10px 0px;
+    }
+
+    .language {
+        width: 28px;
+        height: 28px;
+    }
+
+    .paragraphDiv {
+        width: 100%;
+        padding: 20px;
+        margin: 0px 0px 50px 0px;
+    }
+
+    .aboutCard > h2 {
+        font-size: 16px;
+        padding: 20px;
+        
+    }
+
+    .spanish, .english {
+        width: 100%;
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+   
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+    .aboutCard {
+        padding: 12px;
+    }
+
+    .languageDiv {
+        width: 50%;
+        display: flex;
+        padding-left: 20px;
+        margin: 0px 0px 10px 0px;
+    }
+
+    .language {
+        width: 30px;
+        height: 30px;
+    }
+
+    .paragraphDiv {
+        width: 100%;
+        padding: 20px;
+        margin: 0px 0px 50px 0px;
+    }
+
+    .aboutCard > h2 {
+        font-size: 18px;
+        padding: 20px;
+        
+    }
+
+    .spanish, .english {
+        width: 100%;
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .aboutCard {
+        padding: 12px;
+    }
+
+    .languageDiv {
+        width: 50%;
+        display: flex;
+        padding-left: 25px;
+        margin: 0px 0px 10px 0px;
+    }
+
+    .language {
+        width: 30px;
+        height: 30px;
+    }
+
+    .paragraphDiv {
+        width: 100%;
+        padding: 25px;
+        margin: 0px 0px 50px 0px;
+    }
+
+    .aboutCard > h2 {
+        font-size: 20px;
+        padding: 25px;
+        
+    }
+
+    .spanish, .english {
+        width: 100%;
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+   
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+    .aboutCard {
+        padding: 30px;
+    }
+
+    .languageDiv {
+        width: 50%;
+        display: flex;
+        padding-left: 25px;
+        margin: 0px 0px 10px 0px;
+    }
+
+    .language {
+        width: 30px;
+        height: 30px;
+    }
+
+    .paragraphDiv {
+        width: 100%;
+        padding: 25px;
+        margin: 0px 0px 50px 0px;
+    }
+
+    .aboutCard > h2 {
+        font-size: 22px;
+        padding: 25px;
+        
+    }
+
+    .spanish, .english {
+        width: 100%;
+        font-size: 17px;
+        letter-spacing: 1px;
+    }
+}
+
+@media (min-width: 1281px) and (max-width: 1440px) {
+
+    .aboutCard {
+        padding: 35px 40px;
+    }
+
+    .languageDiv {
+        width: 50%;
+        display: flex;
+        padding-left: 25px;
+        margin: 0px 0px 10px 0px;
+    }
+
+    .language {
+        width: 35px;
+        height: 35px;
+    }
+
+    .paragraphDiv {
+        width: 100%;
+        padding: 25px;
+        margin: 0px 0px 50px 0px;
+    }
+
+    .aboutCard > h2 {
+        font-size: 24px;
+        padding: 25px;
+        
+    }
+
+    .spanish, .english {
+        width: 100%;
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+}
+
+@media (min-width: 1921px) {
+        
+    .aboutCard {
+        padding: 40px 45px;
+    }
+
+    .languageDiv {
+        padding-left: 30px;
+        margin: 0px 0px 30px 0px;  
+    }
+
+    .language {
+        width: 50px;
+        height: 50px;
+    }
+
+    .paragraphDiv {
+        padding: 35px;  
+    }
+
+    .aboutCard > h2 {
+        font-size: 36px;
+        padding: 35px;
+    }
+
+    .spanish, .english {
+        width: 100%;
+        font-size: 26px;
+        letter-spacing: 1px;
+    }
+}

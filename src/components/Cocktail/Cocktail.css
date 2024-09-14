@@ -1,0 +1,327 @@
+.drinkCard {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--rtc--color-almostBlack);
+    padding: 40px 30px;
+    
+}
+
+.cocktailImg {
+    width: 30%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+.cocktailDetails {
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 70%;
+    padding: 10px 40px;
+}
+
+.drinkCard h2 {
+    padding: 0 0 30px;
+    color: var(--rtc--color-supersoftpink);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 24px;
+}
+
+.drinkCard h3 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--rtc--color-superlightblue);
+    font-size: 18px;
+}
+
+.drinkCard p {
+    letter-spacing: 1px;
+    color: var(--rtc--color-almostwhite);
+    font-size: 16px;
+}
+
+.drinkCard span {
+    font-size: 24px;
+    color: var(--rtc--color-superlightblue);
+}
+
+.watch {
+    font-size: 30px;
+    color: var(--rtc--color-lightgreen);
+    cursor: pointer;
+}
+
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 480px) {
+
+    .drinkCard {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 10px 20px 10px;
+    }
+
+    .cocktailImg {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 3px;
+        margin-bottom: 15px;
+    }
+
+    .cocktailDetails{
+        width: 100%;
+        padding: 10px;
+    }
+
+    .drinkCard h2 {
+        padding: 0 0 20px;    
+        font-size: 20px;
+    }
+    
+    .drinkCard h3 {
+        font-size: 14px;
+    }
+    
+    .drinkCard p {
+        font-size: 14px;
+    }
+
+    .drinkCard span {
+        font-size: 20px;
+    }
+    
+    .watch {
+        font-size: 18px;
+    }
+    
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+
+    .drinkCard {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--rtc--color-almostBlack);
+        align-items: start;
+        padding: 35px 20px 40px 20px;
+    }
+
+    .cocktailImg {
+        width: 100%;
+        object-fit: cover;
+        margin-bottom: 35px;
+    }
+
+    .cocktailDetails{
+        width: 100%;
+        padding: 10px;
+        gap: 4px;
+    }
+
+    .drinkCard h2 {
+        padding: 0 0 20px;    
+        font-size: 22px;
+    }
+    
+    .drinkCard h3 {
+        font-size: 16px;
+    }
+    
+    .drinkCard p {
+        font-size: 16px;
+    }
+
+    .drinkCard span {
+        font-size: 20px;
+    }
+    
+    .watch {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+
+    .drinkCard {
+        padding: 30px 15px;
+    }
+
+    .cocktailImg {
+        width: 50%;
+        object-fit: cover;
+        border-radius: 3px;
+    }
+
+    .cocktailDetails{
+        width: 50%;
+        padding: 0px 10px 0px 20px;
+    }
+
+    .drinkCard h2 {
+        padding: 0 0 5px;    
+        font-size: 22px;
+    }
+    
+    .drinkCard h3 {
+        font-size: 14px;
+    }
+    
+    .drinkCard p {
+        font-size: 12px;
+    }
+
+    .drinkCard span {
+        font-size: 20px;
+    }
+    
+    .watch {
+        font-size: 20px;
+    }
+    
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+
+    .drinkCard {
+        padding: 40px 25px;
+    }
+
+    .cocktailImg {
+        width: 50%;
+        object-fit: cover;
+        border-radius: 3px;
+    }
+
+    .cocktailDetails{
+        width: 50%;
+        padding-left: 30px;
+    }
+
+    .drinkCard h2 {
+        padding: 0 0 20px;    
+        font-size: 25px;
+    }
+    
+    .drinkCard h3 {
+        font-size: 19px;
+    }
+    
+    .drinkCard p {
+        font-size: 18px;
+    }
+
+    .drinkCard span {
+        font-size: 24px;
+    }
+    
+    .watch {
+        font-size: 23px;
+    }
+}
+
+@media (min-width: 1281px) and (max-width: 1440px) {
+   
+
+    .drinkCard {
+        padding: 40px;
+    }
+
+    .cocktailImg {
+        width: 50%;
+        object-fit: cover;
+        border-radius: 3px;
+    }
+
+    .cocktailDetails{
+        width: 50%;
+        padding-left: 30px;
+    }
+
+    .drinkCard h2 {
+        padding: 0 0 20px;    
+        font-size: 28px;
+    }
+    
+    .drinkCard h3 {
+        font-size: 18px;
+    }
+    
+    .drinkCard p {
+        font-size: 16px;
+    }
+
+    .drinkCard span {
+        font-size: 28px;
+    }
+    
+    .watch {
+        font-size: 23px;
+    }
+}
+
+
+@media (min-width: 1921px) {
+    
+    .drinkCard {
+        width: 100%;
+        height: auto;
+        display: flex;
+        background-color: var(--rtc--color-almostBlack);
+        align-items: start;
+        padding: 60px 50px;
+    }
+    
+    .cocktailImg {
+        width: 40%;
+    }
+    
+    .cocktailDetails{
+        width: 60%;
+        padding: 10px 60px;
+    }
+    
+    .drinkCard h2 {
+        padding: 0 0 40px;
+        letter-spacing: 2px;
+        font-size: 40px;
+    }
+    
+    .drinkCard h3 {
+        letter-spacing: 2px;
+        font-size: 30px;
+    }
+    
+    .drinkCard p {
+        padding: 0 0 25px;
+        letter-spacing: 2px;
+        font-size: 26px;
+    }
+    
+    .drinkCard span {
+        font-family: var(--rtc--font-family-ultima);
+        font-size: 26px;
+        color: var(--rtc--color-superlightblue);
+    }
+    
+    .watch {
+        font-size: 40px;
+        color: var(--rtc--color-lightgreen);
+        cursor: pointer;
+    }
+    
+
+}

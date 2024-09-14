@@ -1,0 +1,11 @@
+/* DESKTOP FIRST */
+
+.filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    background-color: blue;
+}

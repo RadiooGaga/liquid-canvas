@@ -1,0 +1,161 @@
+
+/* DESKTOP FIRST */
+
+.designDiv {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 20px 30px;
+}
+
+.design {
+    width: 100%;
+    
+}
+
+
+.divButton {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--rtc--color-petroleoblue);
+    padding-bottom: 10px;
+}
+
+.newCocktailButton {
+    width: 350px;
+    height: auto;
+    border: none;
+    padding: 20px;
+    border-radius: 3px;
+    background-color: var(--rtc--color-lightcheeryred);
+    font-family: var(--rtc--font-family-ultima);
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: var(--rtc--color-superlightgreen);
+}
+
+.newCocktailButton:hover {
+    cursor: pointer;
+    background-color: var(--rtc--color-cheeryred);
+}
+
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 480px) {
+
+    .divButton {
+        padding: 8px 8px 18px;
+    }
+
+    .newCocktailButton {
+        width: 250px;
+        padding: 10px;
+        font-size: 12px; 
+    }
+    
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+    .divButton {
+        padding: 6px 6px 16px;
+    }
+
+    .newCocktailButton {
+        width: 280px;
+        padding: 14px;
+        font-size: 14px;
+    }
+
+    
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .divButton {
+        padding: 8px 8px 14px;
+    }
+
+    .newCocktailButton {
+        width: 270px;
+        padding: 12px;
+        font-size: 16px;
+    }
+    
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+    .divButton {
+        padding: 20px 20px;
+    }
+
+    
+}
+
+@media (min-width: 1281px) and (max-width: 1440px) {
+    .divButton {
+        padding: 12px 18px 18px;
+    }
+
+    .newCocktailButton {
+        width: 280px;
+        padding: 14px;
+        font-size: 16px;
+    }
+
+    
+}
+
+
+@media (min-width: 1921px) {
+
+    .divCocktail {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        background-color: black;
+    }
+    
+    .designDiv {
+        width: 100%;
+        padding: 20px 30px;
+    }
+    
+    
+    .divButton {
+        display: flex;
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--rtc--color-petroleoblue);
+        padding: 40px;
+    }
+    
+    .newCocktailButton {
+        width: 450px;
+        height: auto;
+        font-size: 32px;
+        letter-spacing: 2px;
+      
+    }
+    
+    .newCocktailButton:hover {
+        cursor: pointer;
+        background-color: var(--rtc--color-cheeryred);
+    }
+    
+    
+    .loading {
+        font-family: var(--rtc--font-family-ultima);
+        font-size: 20px;
+    }
+}
