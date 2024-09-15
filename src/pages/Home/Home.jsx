@@ -15,6 +15,7 @@ const Home = () => {
             alt="pictureCover" 
           />  
       </div>
+ 
     </>
   );
 };

@@ -1,0 +1,22 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    padding: 30px 10px;
+    width: 100%;
+    height: auto;
+    gap: 30px;
+    font-size: 20px;
+
+}
+
+.arrowButton {
+    color: var(--rtc--color-almostBlack);
+    font-family: var(--rtc--font-family-ultima);
+    width: 40px;
+    height: 40px;
+}
+
+.pagination > p {
+    color: var(--rtc--color-almostwhite);
+    font-family: var(--rtc--font-family-ultima);
+}
