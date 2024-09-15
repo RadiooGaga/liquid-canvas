@@ -19,7 +19,8 @@
     .showAlphabet {
         position: relative;
         top: 0;
-        width: 140px;
+        width: 130px;
+        font-size: 10px;
     }
 }
 
@@ -28,7 +29,7 @@
      
     .showAlphabet {
         position: relative;
-        top: 0;
+        bottom: 1em;
         width: 140px;    
     }
 }
@@ -67,6 +68,19 @@
         top: 0;
         width: 300px;
         font-size: 14px;
+        padding: 12px;
+      
+    }
+
+}
+
+@media  (min-width: 1921px) {
+
+    .showAlphabet {
+        position: relative;
+        top: 0;
+        width: 300px;
+        font-size: 18px;
         padding: 12px;
       
     }
