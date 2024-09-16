@@ -109,50 +109,18 @@
         padding: 14px;
         font-size: 16px;
     }
-
-    
 }
 
 
 @media (min-width: 1921px) {
 
-    .divCocktail {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: auto;
-        background-color: black;
-    }
-    
-    .designDiv {
-        width: 100%;
-        padding: 20px 30px;
-    }
-    
-    
     .divButton {
-        display: flex;
-        width: 100%;
-        height: auto;
-        justify-content: center;
-        align-items: center;
-        background-color: var(--rtc--color-petroleoblue);
-        padding: 40px;
+        padding: 20px;
     }
     
     .newCocktailButton {
-        width: 450px;
-        height: auto;
-        font-size: 32px;
-        letter-spacing: 2px;
-      
+        font-size: 20px;
     }
-    
-    .newCocktailButton:hover {
-        cursor: pointer;
-        background-color: var(--rtc--color-cheeryred);
-    }
-    
     
     .loading {
         font-family: var(--rtc--font-family-ultima);

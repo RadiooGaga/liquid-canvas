@@ -277,12 +277,8 @@
 @media (min-width: 1921px) {
     
     .drinkCard {
-        width: 100%;
+        padding: 30px 50px;
         height: auto;
-        display: flex;
-        background-color: var(--rtc--color-almostBlack);
-        align-items: start;
-        padding: 60px 50px;
     }
     
     .cocktailImg {
@@ -291,24 +287,25 @@
     
     .cocktailDetails{
         width: 60%;
-        padding: 10px 60px;
+        padding: 20px 30px 10px 60px;
+        gap: 0px;
     }
     
     .drinkCard h2 {
-        padding: 0 0 40px;
+        padding: 0 0 10px;
         letter-spacing: 2px;
-        font-size: 40px;
+        font-size: 30px;
     }
     
     .drinkCard h3 {
         letter-spacing: 2px;
-        font-size: 30px;
+        font-size: 20px;
     }
     
     .drinkCard p {
         padding: 0 0 25px;
         letter-spacing: 2px;
-        font-size: 26px;
+        font-size: 18px;
     }
     
     .drinkCard span {
