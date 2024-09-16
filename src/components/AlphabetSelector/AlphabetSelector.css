@@ -2,7 +2,7 @@
 
 .abcSelectorDiv {
     position: absolute;
-    top: 12em;
+    top: 15em;
     left: 0em;
     display: flex;
     width: 100%;
@@ -160,7 +160,7 @@
 @media (min-width: 1921px) {
     .abcSelectorDiv {
         position: absolute;
-        top: 10em;
+        top: 15em;
         display: flex;
         justify-content: center;
         justify-items: center;
