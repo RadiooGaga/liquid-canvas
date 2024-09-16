@@ -7,7 +7,7 @@ header {
     width: 100%;
     height: auto;
     background-color: black;
-    border-bottom: 10px solid var(--rtc--color-petroleoblue);
+    border-bottom: 10px solid var(--rtc--color-cheeryred);
 }
 
 .divLogo {
@@ -326,7 +326,7 @@ nav {
         width: 100%;
         height: auto;
         background-color: black;
-        border-bottom: 10px solid var(--rtc--color-petroleoblue);
+        border-bottom: 10px solid var(--rtc--color-cheeryred);
     }
     
     .divLogo {
@@ -393,7 +393,7 @@ nav {
 
 @media (min-width: 1921px) {
     header {
-        border-bottom: 12px solid var(--rtc--color-petroleoblue);
+        border-bottom: 12px solid var(--rtc--color-cheeryred);
     }
     
     .divLogo {
