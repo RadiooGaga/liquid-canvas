@@ -3,7 +3,7 @@
 
 .liquorsDiv {
     position: relative;
-    top: 3em;
+    top: 0em;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -24,18 +24,14 @@
 @media (max-width: 480px) {
 
     .liquorsDiv {
-        top: 1em;
         gap: 0.5em; 
         margin-bottom: 50px;
     }
-
 }
-
 
 @media (min-width: 481px) and (max-width: 768px) {
 
     .liquorsDiv {
-        top: 2em;
         gap: 0.5em; 
         margin-bottom: 50px;
     }
@@ -45,7 +41,6 @@
 @media (min-width: 769px) and (max-width: 1024px) {
 
     .liquorsDiv {
-        top: 2em;
         gap: 0.8em; 
         margin-bottom: 50px;
     }
@@ -60,7 +55,7 @@
 @media (min-width: 1025px) and (max-width: 1280px) {
 
     .liquorsDiv {
-        top: 2em;
+        top: 0em;
         gap: 1em; 
         margin-bottom: 50px;
     }
@@ -71,7 +66,7 @@
 @media (min-width: 1281px) and (max-width: 1440px) {
 
     .liquorsDiv {
-        top: 3em;
+        top: 0em;
         gap: 1.5em; 
         margin-bottom: 50px;
     }
@@ -81,7 +76,6 @@
 @media (min-width: 1921px) {
 
     .liquorsDiv {
-        top: 3em;
         gap: 1.8em; 
         margin-bottom: 50px;
     }
