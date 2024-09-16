@@ -10,11 +10,11 @@ const Loading = ({  selectedLetter, selectedLiquor, text, message }) => {
       setLoading(true);
       setNoDrinks(false);
 
-      // Simulación de carga
+      // Cargando...
       const timeout = setTimeout(() => {
         setLoading(false);
         // Se asume que no hay bebidas si ha pasado el tiempo de carga
-        setNoDrinks(true); // Aquí podrías implementar una lógica para comprobar si realmente no hay bebidas.
+        setNoDrinks(true); 
       }, 2000);
 
       return () => clearTimeout(timeout);

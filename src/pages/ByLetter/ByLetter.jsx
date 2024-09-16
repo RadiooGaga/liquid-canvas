@@ -16,8 +16,6 @@ const ByLetter = () => {
   const [page, setPage] = useState(1);
   const drinksPerPage = 10;
 
-
-
  
   useEffect(() => {
     if (letter) {
@@ -25,28 +23,28 @@ const ByLetter = () => {
     }
   }, []);
   
-    const fetchByLetter = (letter) => {
+  const fetchByLetter = (letter) => {
 
       console.log(letter, "FETCH DE LETTER")
       fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${letter}`)
       .then((res) => res.json()) 
       .then((data) => setDrinks(data.drinks || []) )
       .catch((error) => console.error('sin datos:', error));
+  }
+
+  useEffect(() => {
+    if (selectedLetter) {
+      console.log(selectedLetter);
+      fetchByLetter(selectedLetter);
     }
-    useEffect(() => {
-      if (selectedLetter) {
-        console.log(selectedLetter);
-        fetchByLetter(selectedLetter);
-      }
-    }, [selectedLetter]);
+  }, [selectedLetter]);
      
 
 
-  // Alhacer click actualiza estado de la letra
+  // Al hacer click actualiza estado de la letra y navega a la ruta con la letra seleccionada
   const handleLetterClick = (letter) => {
     setSelectedLetter(letter);
     navigate(`/cocktails/${letter}`)
-    //navega a la ruta con la letra seleccionada
     console.log(letter, "letra seleccionada")
   };
 
@@ -54,14 +52,14 @@ const ByLetter = () => {
       navigate(`/cocktail/${idDrink}`)
   }
 
+
+  // Cálculo de cocteles por página 
   const startIndex = (page - 1) * drinksPerPage;
   const endIndex = startIndex + drinksPerPage;
   const currentDrinks = drinks.slice(startIndex, endIndex);
-  const isLastPage = endIndex >= drinks.length; console.log(isLastPage, "ultima pagina")
-   console.log(currentDrinks, "productos en esta página")
+  const isLastPage = endIndex >= drinks.length; 
    
    
-  
 
   return (
     <>
@@ -93,16 +91,11 @@ const ByLetter = () => {
           )
         )}
 
-        {/* Renderizar el componente de paginación */}
+        {/* Renderizado del componente de paginación */}
         {drinks.length > drinksPerPage && (
           <Pagination page={page} setPage={setPage} isLastPage={isLastPage} />
         )}
-         {/* Mostrar el mensaje si es la última página y no hay más productos */}
-         {isLastPage && (
-          <div className='endOfResults'>
-            <p>There`s no more cocktails in this page</p>
-          </div>
-        )}
+      
       </div>
     </>
   );

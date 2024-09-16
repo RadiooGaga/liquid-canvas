@@ -7,10 +7,10 @@ import './ByLiquor.css'
 
 const ByLiquor= () => {
 
-  const [selectedLiquor, setSelectedLiquor] = useState(null);//estado inicial null
+  const [selectedLiquor, setSelectedLiquor] = useState(null);
   const [drinks, setDrinks] = useState([]);
   const navigate = useNavigate();
-  const { liquor } = useParams(); //parámetro a que se modifica
+  const { liquor } = useParams();
   const [page, setPage] = useState(1);
   const drinksPerPage = 10;
 
@@ -29,7 +29,7 @@ const ByLiquor= () => {
       fetch(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${liquor}`)
         .then((res) => res.json()) // Convertimos la respuesta a JSON
         .then((data) => {
-          console.log("RESPUESTA LICOR", data); // Imprimimos los datos correctamente
+          console.log("LICORES", data); // Imprimimos los datos correctamente
           setDrinks(data.drinks || []); // Si no hay bebidas, seteamos un array vacío
         })
         .catch((error) => console.error('sin datos:', error));
@@ -89,11 +89,6 @@ const ByLiquor= () => {
               {drinks.length > drinksPerPage && (
               <Pagination page={page} setPage={setPage} isLastPage={isLastPage}/>
               )}   
-               {isLastPage && (
-                <div className='endOfResults'>
-              <p>There`s no more cocktails in this page</p>
-          </div>
-        )}          
         </div>
     </>
   )

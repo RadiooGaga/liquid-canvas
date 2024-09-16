@@ -27,7 +27,7 @@ const LiquorSelector = ({ onLiquorClick }) => {
     label: liquor.strIngredient1,
   }));
 
-  // Maneja el cambio en el selector
+  // Manejo el cambio en el selector
   const handleLiquorChange = (selectedOption) => {
     setSelectedOption(selectedOption);
     if (onLiquorClick) {

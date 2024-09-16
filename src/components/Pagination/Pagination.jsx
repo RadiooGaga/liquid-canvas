@@ -2,6 +2,8 @@ import React from "react";
 import './Pagination.css'
 
 const Pagination = ({ page, setPage, isLastPage }) => {
+
+  
   return (
     <div className="pagination">
       <button
