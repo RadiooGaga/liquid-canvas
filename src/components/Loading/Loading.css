@@ -16,7 +16,13 @@
 @media (max-width: 480px) {
 
     .loading,.noDrinksFound {
-        font-size: 14px;
+        font-size: 12px;
     }
 }
 
+@media (min-width: 481px) and (max-width: 768px) {
+
+    .loading,.noDrinksFound {
+        font-size: 14px;
+    }
+}

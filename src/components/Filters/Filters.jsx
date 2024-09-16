@@ -5,7 +5,6 @@ import ByLiquor from '../../pages/ByLiquor/ByLiquor'
 
 const Filters = () => {
 
-
   return (
     
     <div className='filters'> 

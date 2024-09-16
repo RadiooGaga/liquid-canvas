@@ -6,7 +6,8 @@ const LiquorSelector = ({ onLiquorClick }) => {
   const [liquors, setLiquors] = useState([]);
   const [selectedOption, setSelectedOption] = useState(null);
 
-  // Cargar la lista de licores desde la API
+
+  // Cargando la lista de licores desde la API
   useEffect(() => {
     fetch('https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list')
       .then((res) => res.json())
@@ -21,12 +22,14 @@ const LiquorSelector = ({ onLiquorClick }) => {
       });
   }, []);
 
-  // Convertir licores a opciones para el Select
+
+  // Convierto licores a opciones para el Select
   const options = liquors.map((liquor) => ({
     value: liquor.strIngredient1,
     label: liquor.strIngredient1,
   }));
 
+  
   // Manejo el cambio en el selector
   const handleLiquorChange = (selectedOption) => {
     setSelectedOption(selectedOption);
