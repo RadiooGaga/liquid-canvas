@@ -55,6 +55,7 @@
 @media (min-width: 1025px) and (max-width: 1280px) {
 
     .liquorsDiv {
+        position: relative;
         top: 0em;
         gap: 1em; 
         margin-bottom: 50px;
@@ -66,6 +67,7 @@
 @media (min-width: 1281px) and (max-width: 1440px) {
 
     .liquorsDiv {
+        position: relative;
         top: 0em;
         gap: 1.5em; 
         margin-bottom: 50px;
@@ -74,9 +76,11 @@
 
 
 @media (min-width: 1921px) {
-
+    
     .liquorsDiv {
-        gap: 1.8em; 
+        position: relative;
+        top: 0em;
+        gap: 1.5em; 
         margin-bottom: 50px;
     }
 }

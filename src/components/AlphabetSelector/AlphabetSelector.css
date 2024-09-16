@@ -2,7 +2,7 @@
 
 .abcSelectorDiv {
     position: absolute;
-    top: 16em;
+    top: 12em;
     left: 0em;
     display: flex;
     width: 100%;
@@ -10,7 +10,7 @@
     background-color: black; 
     z-index: 15;
     border-bottom: 5px solid var(--rtc--color-darkgreen);
-    padding-top: 30px;
+    padding-top: 50px;
     
 }
 
@@ -43,7 +43,7 @@
 
     .abcSelectorDiv {
         position: absolute;
-        top: 12em;
+        top: 11.5em;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;

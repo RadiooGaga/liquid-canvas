@@ -122,7 +122,7 @@
 @media (min-width: 1025px) and (max-width: 1280px) {
     
     .drinksDiv {
-        top: 6em;
+        top: 4em;
         gap: 1em; 
         margin-bottom: 140px;
     }
@@ -147,7 +147,7 @@
 @media (min-width: 1281px) and (max-width: 1440px) {
 
     .drinksDiv {
-        top: 16em;
+        top: 5em;
         gap: 1.5em; 
         margin-bottom: 140px;
     }
@@ -159,7 +159,7 @@
 
     .cocktailCard h2 {
         position:relative;
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 }
 
