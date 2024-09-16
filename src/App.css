@@ -11,6 +11,7 @@
   font-weight: normal;
   font-style: normal;
 }
+
   
 a {
   text-decoration: none;
@@ -30,6 +31,6 @@ h2 {
 
 p {
   font-family: var(--rtc--font-family-lanear);
-  font-weight: 10;
+  font-weight: 100;
 }
 
