@@ -8,7 +8,6 @@ import ByLetter from './pages/ByLetter/ByLetter';
 import CocktailById from './pages/CocktailById/CocktailById';
 import RandomCocktails from './pages/RandomCocktails/Random'
 import About from './pages/About/About';
-import Footer from './components/Footer/Footer';
 import ByLiquor from './pages/ByLiquor/ByLiquor';
 
 
@@ -26,8 +25,6 @@ const App = () => {
           <Route path="/cocktails" element={<RandomCocktails />} />
           <Route path="/about" element={<About />} />
         </Routes>
-
-        <Footer />
       </div>
   )
 }

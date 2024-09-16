@@ -44,7 +44,7 @@ const LiquorSelector = ({ onLiquorClick }) => {
         options={options}
         value={selectedOption}
         onChange={handleLiquorChange}
-        placeholder="SELECT LIQUOR"
+        placeholder="SEARCH BY INGREDIENT"
       />
   );
 };

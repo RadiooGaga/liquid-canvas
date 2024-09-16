@@ -29,6 +29,7 @@ h2 {
 }
 
 p {
-  font-family: var(--rtc--font-family-ultima);
+  font-family: var(--rtc--font-family-lanear);
+  font-weight: 10;
 }
 

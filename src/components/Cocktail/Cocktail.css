@@ -160,13 +160,13 @@
     }
 
     .cocktailImg {
-        width: 50%;
+        width: 40%;
         object-fit: cover;
         border-radius: 3px;
     }
 
     .cocktailDetails{
-        width: 50%;
+        width: 60%;
         padding: 0px 10px 0px 20px;
     }
 
@@ -180,7 +180,7 @@
     }
     
     .drinkCard p {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .drinkCard span {
@@ -221,7 +221,7 @@
     }
     
     .drinkCard p {
-        font-size: 18px;
+        font-size: 14px;
     }
 
     .drinkCard span {

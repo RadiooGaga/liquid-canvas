@@ -1,5 +1,6 @@
 import React from 'react'
 import './Cocktail.css'
+import GoBackButton from '../GoBackButton/GoBackButton';
 
 const Cocktail = ({drinks}) => {
 
@@ -57,6 +58,9 @@ const Cocktail = ({drinks}) => {
             ) : (
               <span>  No tutorials available</span>
             )}
+            <br />
+            <br />
+            <GoBackButton />
         </div>
       </div>
       </>
