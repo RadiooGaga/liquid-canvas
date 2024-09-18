@@ -28,10 +28,8 @@ const RandomCocktails = () => {
       </div>
       {showDesign && (
         <div className='designDiv'> 
-          <img className='design' src="/assets/pics/cocktail2.jpg" alt="cocktail2" />
-          <img className='design' src="/assets/pics/cocktail1.jpg" alt="cocktail1" />
-          <img className='design' src="/assets/pics/cocktail3.jpg" alt="cocktail3" />
-          
+          <img className='design' src="/assets/pics/rbg1.jpeg" alt="randomBackground" />    
+          <img className='design' src="/assets/pics/rbg2.jpeg" alt="randomBackground" />        
         </div>
       )}
       
