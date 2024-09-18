@@ -6,7 +6,7 @@ footer {
     height: 20px;
     background-color: black;
     padding: 20px 0;
-    position: relative;
+    position: sticky;
     bottom: 0;
 }
 
@@ -22,7 +22,7 @@ footer {
 @media (max-width: 480px) {
 
     footer {
-        position: relative;
+        position: sticky;
         bottom: 0em;
         padding: 0px;
     }

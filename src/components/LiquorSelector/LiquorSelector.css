@@ -34,7 +34,7 @@
     
     .liquorsSelector {
         position: relative;
-        bottom: 1em;
+        top: 0.2em;
         width: 200px;
         font-size: 12px;
         letter-spacing: 0px;
