@@ -33,7 +33,7 @@
 
 body {
   min-width: 320px;
-  max-height: 100svh;
+  height: 100svh;
   overflow-y: scroll;
   background-color: black;
 }

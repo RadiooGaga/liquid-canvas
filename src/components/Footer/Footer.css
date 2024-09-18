@@ -6,7 +6,7 @@ footer {
     height: 20px;
     background-color: black;
     padding: 20px 0;
-    position: static;
+    position: relative;
     bottom: 0;
 }
 
@@ -20,8 +20,15 @@ footer {
 
 
 @media (max-width: 480px) {
+
+    footer {
+        position: relative;
+        bottom: 0em;
+        padding: 0px;
+    }
+
     .footerSpan {
-        font-size: 8px;
+        font-size: 6px;
     }
 }
 
