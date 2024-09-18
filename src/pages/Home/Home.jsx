@@ -9,13 +9,13 @@ const Home = () => {
   return (
     <>
      <Filters />
-      <div className='homeDiv'>
+      <figure className='homeDiv'>
           <img 
             className='coverImage' 
             src="/assets/pics/2.jpg" 
             alt="pictureCover" 
           />  
-      </div>
+      </figure>
     <Footer />
     </>
   );

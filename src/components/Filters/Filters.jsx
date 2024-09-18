@@ -7,10 +7,10 @@ const Filters = () => {
 
   return (
     
-    <div className='filters'> 
+    <section className='filters'> 
         <ByLetter />
         <ByLiquor />
-    </div>
+    </section>
   )
 }
 

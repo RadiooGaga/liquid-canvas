@@ -22,15 +22,15 @@ const RandomCocktails = () => {
   }
 
   return (
-    <div>
+    <section>
       <div className='divButton'>
       <button className='newCocktailButton' onClick={fetchData}>GET A RANDOM COCKTAIL!</button>
       </div>
       {showDesign && (
-        <div className='designDiv'> 
+        <figure className='designDiv'> 
           <img className='design' src="/assets/pics/rbg1.jpeg" alt="randomBackground" />    
           <img className='design' src="/assets/pics/rbg2.jpeg" alt="randomBackground" />        
-        </div>
+        </figure>
       )}
       
       {drinks ? (
@@ -40,7 +40,7 @@ const RandomCocktails = () => {
         ) : (
           <span>Loading...</span>
         )}
-        </div>
+        </section>
     
     
   );

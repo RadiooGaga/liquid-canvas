@@ -10,11 +10,11 @@ header {
     border-bottom: 10px solid var(--rtc--color-cheeryred);
 }
 
-.divLogo {
+.sectionLogo {
     width: 11%;
 }
 
-.divLogo img {
+.sectionLogo img {
     padding: 20px;
     width: 100%;
     object-fit: cover;
@@ -86,11 +86,11 @@ nav {
         flex-wrap: wrap;
     }
 
-    .divLogo {
+    .sectionLogo {
         width: 25%;
     }
     
-    .divLogo > img {
+    .sectionLogo > img {
         padding: 10px;
         width: 100%;
         object-fit: cover;
@@ -139,11 +139,11 @@ nav {
         flex-wrap: wrap;
     }
 
-    .divLogo {
+    .sectionLogo {
         width: 26%;
     }
 
-    .divLogo > img {
+    .sectionLogo > img {
         padding: 10px;
         width: 100%;
         object-fit: cover;
@@ -187,11 +187,11 @@ nav {
         flex-wrap: wrap;
     }
     
-    .divLogo {
+    .sectionLogo {
         width: 22%;
     }
     
-    .divLogo > img {
+    .sectionLogo > img {
         width: 100%;
         padding: 10px;
         object-fit: cover;
@@ -232,11 +232,11 @@ nav {
 
 @media (min-width: 1025px) and (max-width: 1280px) {
     
-    .divLogo {
+    .sectionLogo {
         width: 16%;
     }
     
-    .divLogo img {
+    .sectionLogo img {
         padding: 20px;
         width: 100%;
         object-fit: cover;
@@ -279,11 +279,11 @@ nav {
 
 @media (min-width: 1281px) and (max-width: 1440px) {
     
-    .divLogo {
+    .sectionLogo {
         width: 13%;
     }
     
-    .divLogo img {
+    .sectionLogo img {
         padding: 20px;
         width: 100%;
         object-fit: cover;
@@ -329,11 +329,11 @@ nav {
         border-bottom: 10px solid var(--rtc--color-cheeryred);
     }
     
-    .divLogo {
+    .sectionLogo {
         width: 8%;
     }
     
-    .divLogo img {
+    .sectionLogo img {
         padding: 10px;
         width: 100%;
         object-fit: cover;
@@ -397,7 +397,7 @@ nav {
         
     }
     
-    .divLogo {
+    .sectionLogo {
         width: 10%;
     }
     

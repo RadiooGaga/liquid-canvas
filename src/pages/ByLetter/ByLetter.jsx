@@ -67,7 +67,7 @@ const ByLetter = () => {
         <AlphabetButton onLetterClick={handleLetterClick}/>
         </div>
        
-        <div className='drinksDiv'>
+        <section className='drinksSection'>
         {drinks.length > 0 ? (
           currentDrinks.map((drink) => (
             <div key={drink.idDrink} className='cocktailCard'>
@@ -96,7 +96,7 @@ const ByLetter = () => {
           <Pagination page={page} setPage={setPage} isLastPage={isLastPage} />
         )}
       
-      </div>
+      </section>
     </>
   );
 }

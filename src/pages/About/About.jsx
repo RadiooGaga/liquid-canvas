@@ -4,13 +4,13 @@ import './About.css'
 const About = () => {
   return (
 
-    <div className='aboutCard'>
+    <section className='aboutCard'>
       <h2>ABOUT THIS PAGE</h2>
       <br />
       <div className='languageDiv'>
         <img className='language' src="/assets/pics/english.png" alt="english" />
       </div>
-      <div className='paragraphDiv'>
+      <article className='paragraph'>
         <p className='english'>If you're here, it's because you're not satisfied with just a mixed drink.
           <br />
           <br />
@@ -28,12 +28,12 @@ const About = () => {
           This website was created for project number 11 (react basics), in which i designed a cocktail recipe website.
           The data and images presented here, regarding the cocktails that appear on the website, are sourced from the free api www.thecocktaildb.com/api.php.
         </p>
-      </div>
+      </article>
 
       <div className='languageDiv'>
         <img className='language' src="/assets/pics/spanish.png" alt="spanish" />
       </div>
-      <div className='paragraphDiv'>
+      <article className='paragraph'>
         <p className='spanish'>Si estás aquí, es porque no te conformas con el cubata. 
           <br />
           <br />
@@ -60,9 +60,9 @@ const About = () => {
 
         </p>
         
-      </div>
+      </article>
       
-    </div>
+    </section>
   )
 }
 

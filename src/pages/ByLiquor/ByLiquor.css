@@ -1,7 +1,7 @@
 /* DESKTOP FIRST */
 
 
-.liquorsDiv {
+.liquorsSection {
     position: relative;
     top: 0em;
     display: flex;
@@ -23,7 +23,7 @@
 
 @media (max-width: 480px) {
 
-    .liquorsDiv {
+    .liquorsSection {
         gap: 0.5em; 
         margin-bottom: 50px;
     }
@@ -31,7 +31,7 @@
 
 @media (min-width: 481px) and (max-width: 768px) {
 
-    .liquorsDiv {
+    .liquorsSection {
         gap: 0.5em; 
         margin-bottom: 50px;
     }
@@ -40,7 +40,7 @@
 
 @media (min-width: 769px) and (max-width: 1024px) {
 
-    .liquorsDiv {
+    .liquorsSection {
         gap: 0.8em; 
         margin-bottom: 50px;
     }
@@ -54,7 +54,7 @@
 
 @media (min-width: 1025px) and (max-width: 1280px) {
 
-    .liquorsDiv {
+    .liquorsSection {
         position: relative;
         top: 0em;
         gap: 1em; 
@@ -66,7 +66,7 @@
 
 @media (min-width: 1281px) and (max-width: 1440px) {
 
-    .liquorsDiv {
+    .liquorsSection {
         position: relative;
         top: 0em;
         gap: 1.5em; 
@@ -77,7 +77,7 @@
 
 @media (min-width: 1921px) {
     
-    .liquorsDiv {
+    .liquorsSection {
         position: relative;
         top: 0em;
         gap: 1.5em; 

@@ -6,13 +6,13 @@ const Header = () => {
     
   return (
     <header>
-        <div className='divLogo'>
+        <section className='sectionLogo'>
         <img src="/assets/pics/LiquidCanvasLogo.png" alt="logo" />
-        </div>
-        <div className='brand'>
+        </section>
+        <section className='brand'>
             <h1>LIQUID CANVAS</h1>
             <p>art and color in every sip</p>
-        </div>
+        </section>
         <nav>
             <ul className='menu'>
                 <li>

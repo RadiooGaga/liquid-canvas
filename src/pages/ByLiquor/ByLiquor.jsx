@@ -64,7 +64,7 @@ const ByLiquor= () => {
         <LiquorSelector onLiquorClick={handleLiquorClick}  />
         </div>
   
-        <div className='liquorsDiv'>
+        <section className='liquorsSection'>
           {drinks.length > 0 ? (
             currentDrinks.map((drink) => (
                 <div key={drink.idDrink} className='cocktailCard '>
@@ -89,7 +89,7 @@ const ByLiquor= () => {
               {drinks.length > drinksPerPage && (
               <Pagination page={page} setPage={setPage} isLastPage={isLastPage}/>
               )}   
-        </div>
+        </section>
     </>
   )
 }
