@@ -7,14 +7,13 @@
     flex-direction: column;
     background-color: var(--rtc--color-almostBlack);
     align-items: start;
-    padding: 35px 40px;
+    padding: 10px 40px;
 }
 
 .languageDiv {
     width: 50%;
     display: flex;
     padding-left: 25px;
-    margin: 0px 0px 10px 0px;  
 }
 
 
@@ -29,7 +28,7 @@
     text-align: justify;
     width: 100%;
     padding: 25px;
-    margin: 0px 0px 50px 0px;
+    margin: 0px 0px 40px 0px;
 }
 
 .aboutCard > h2 {
@@ -39,7 +38,7 @@
 
 .spanish, .english {
     width: 100%;
-    font-size: 18px;
+    font-size: 14px;
     letter-spacing: 1px;
     
 }
@@ -119,7 +118,7 @@
 
     .spanish, .english {
         width: 100%;
-        font-size: 14px;
+        font-size: 12px;
         letter-spacing: 1px;
     }
 
@@ -157,7 +156,7 @@
 
     .spanish, .english {
         width: 100%;
-        font-size: 16px;
+        font-size: 14px;
         letter-spacing: 1px;
     }
    
@@ -195,7 +194,7 @@
 
     .spanish, .english {
         width: 100%;
-        font-size: 17px;
+        font-size: 14px;
         letter-spacing: 1px;
     }
 }
@@ -232,7 +231,7 @@
 
     .spanish, .english {
         width: 100%;
-        font-size: 18px;
+        font-size: 14px;
         letter-spacing: 1px;
     }
 }
@@ -264,7 +263,7 @@
 
     .spanish, .english {
         width: 100%;
-        font-size: 26px;
+        font-size: 18px;
         letter-spacing: 1px;
     }
 }

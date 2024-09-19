@@ -24,7 +24,6 @@ const About = () => {
           <br />
           <br />
           <br />
-          <br />
           This website was created for project number 11 (react basics), in which i designed a cocktail recipe website.
           The data and images presented here, regarding the cocktails that appear on the website, are sourced from the free api www.thecocktaildb.com/api.php.
         </p>
@@ -49,7 +48,6 @@ const About = () => {
           <br />
           <br />
           Buena suerte!
-          <br />
           <br />
           <br />
           <br />

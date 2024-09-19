@@ -3,7 +3,7 @@
 .homeDiv {
     display: flex;
     width: 100%;
-    height: 70svh;
+    height: 75svh;
 }
 
 .coverImage {
@@ -29,7 +29,7 @@
     .homeDiv {
         display: flex;
         width: 100%;
-        height: 67svh;
+        height: 75svh;
     } 
 
     .coverImage {
@@ -45,7 +45,7 @@
     .homeDiv {
         display: flex;
         width: 100%;
-        height: 67svh;
+        height: 70svh;
     }
    
 }
@@ -55,7 +55,7 @@
     .homeDiv {
         display: flex;
         width: 100%;
-        height: 65svh;
+        height: 75svh;
     }
 }
 
@@ -74,5 +74,6 @@
     .homeDiv {
         display: flex;
         width: 100%;
+        height: 70svh;
     }  
 }
