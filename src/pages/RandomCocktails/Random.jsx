@@ -1,10 +1,9 @@
-
 import React, { useState } from 'react';
+import { Cocktail } from '../../components/CocktailDetails/CocktailDetails';
 import './Random.css'
-import Cocktail from '../../components/Cocktail/Cocktail';
 
 
-const RandomCocktails = () => {
+export const RandomCocktails = () => {
 
   const [drinks, setDrinks] = useState(null);
   const [showDesign, setShowDesign] = useState(true);
@@ -46,4 +45,3 @@ const RandomCocktails = () => {
   );
 }
 
-export default RandomCocktails

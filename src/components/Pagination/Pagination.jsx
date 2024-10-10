@@ -1,9 +1,7 @@
-import React from "react";
+import React, {memo} from "react";
 import './Pagination.css'
 
-const Pagination = ({ page, setPage, isLastPage }) => {
-
-  
+export const Pagination = memo(({ page, setPage, isLastPage }) => {  
   return (
     <div className="pagination">
       <button
@@ -23,6 +21,5 @@ const Pagination = ({ page, setPage, isLastPage }) => {
       </button>
     </div>
   );
-};
+});
 
-export default Pagination;

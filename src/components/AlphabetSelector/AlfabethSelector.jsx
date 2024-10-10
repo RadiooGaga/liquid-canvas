@@ -1,7 +1,7 @@
 import React from 'react';
 import './AlphabetSelector.css';
 
-const AlphabetSelector = ({ onLetterClick }) => {
+export const AlphabetSelector = ({ onLetterClick }) => {
 
   const firstLetter = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 
@@ -17,4 +17,4 @@ const AlphabetSelector = ({ onLetterClick }) => {
   );
 };
 
-export default AlphabetSelector;
+

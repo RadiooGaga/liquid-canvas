@@ -1,8 +1,8 @@
 import React from 'react'
-import './Cocktail.css'
+import './CocktailDetails.css'
 import GoBackButton from '../GoBackButton/GoBackButton';
 
-const Cocktail = ({drinks}) => {
+export const Cocktail = ({drinks}) => {
 
   if (!drinks) {
     return <p>THERE´S NO COCKTAIL INFO - PAGE NOT WORKING</p>;
@@ -10,7 +10,6 @@ const Cocktail = ({drinks}) => {
 
   const getIngredients = () => {
     const ingredients = [];
-
     for (let i = 1; i <= 10; i++) {
       const ingredient = drinks[`strIngredient${i}`];
       if (ingredient) {
@@ -72,4 +71,3 @@ const Cocktail = ({drinks}) => {
 
 }
 
-export default Cocktail

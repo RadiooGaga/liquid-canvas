@@ -1,104 +1,48 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
-import AlphabetButton from '../../components/AlphabetButton/AlphabetButton';
-import Pagination from '../../components/Pagination/Pagination';
-import Loading from '../../components/Loading/Loading';
-import './ByLetter.css'
+import React, {useState, useCallback, useEffect} from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import { useApi } from "../../utils/useApi";
+import { AlphabetButton } from '../../components/AlphabetButton/AlphabetButton';
+import { SelectedDrinksSection } from '../../components/SelectedDrinksSection/SelectedDrinksSection';
+import { Loading } from "../../components/Loading/Loading";
+import { Error } from "../../components/Error/Error";
 
 
+export const ByLetter= () => {
 
-const ByLetter = () => {
-
-  const [selectedLetter, setSelectedLetter] = useState(null);//el estado inicial es null
-  const [drinks, setDrinks] = useState([]);
+  const { letter } = useParams();
+  const [selected, setSelected] = useState()
   const navigate = useNavigate();
-  const { letter } = useParams(); //parámetro a extraer en el que se basan las modificaciones...
-  const [page, setPage] = useState(1);
   const drinksPerPage = 10;
 
- 
-  useEffect(() => {
-    if (letter) {
-      setSelectedLetter(letter);
-    }
-  }, []);
-  
-  const fetchByLetter = (letter) => {
+  const { drinks, loading, error } = useApi(letter, 'ByLetter'); 
 
-      console.log(letter, "FETCH DE LETTER")
-      fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${letter}`)
-      .then((res) => res.json()) 
-      .then((data) => setDrinks(data.drinks || []) )
-      .catch((error) => console.error('sin datos:', error));
+  if (loading) {
+    <Loading
+    selected={selected}
+    text="LOADING DRINKS..."
+    message={`NO DRINKS FOUND FOR ${selected}`}
+  />;
   }
 
-  useEffect(() => {
-    if (selectedLetter) {
-      console.log(selectedLetter);
-      fetchByLetter(selectedLetter);
-    }
-  }, [selectedLetter]);
-     
+  if (error) {
+    <Error text='ERROR'/>;
+  }
 
-
-  // Al hacer click actualiza estado de la letra y navega a la ruta con la letra seleccionada
-  const handleLetterClick = (letter) => {
-    setSelectedLetter(letter);
+  const handleSelectionClick = useCallback((letter) => {
+    setSelected(letter);
     navigate(`/cocktails/${letter}`)
-    console.log(letter, "letra seleccionada")
-  };
+  }, [navigate]);
 
-  const handleLetterCocktail = (idDrink) => {
-      navigate(`/cocktail/${idDrink}`)
-  }
-
-
-  // Cálculo de cocteles por página 
-  const startIndex = (page - 1) * drinksPerPage;
-  const endIndex = startIndex + drinksPerPage;
-  const currentDrinks = drinks.slice(startIndex, endIndex);
-  const isLastPage = endIndex >= drinks.length; 
-   
-   
 
   return (
     <>
-        <div className='filters'>
-        <AlphabetButton onLetterClick={handleLetterClick}/>
-        </div>
-       
-        <section className='drinksSection'>
-        {drinks.length > 0 ? (
-          currentDrinks.map((drink) => (
-            <div key={drink.idDrink} className='cocktailCard'>
-              <h2>{drink.strDrink}</h2>
-              <img
-                src={drink.strDrinkThumb}
-                alt={drink.strDrink}
-                onClick={() => handleLetterCocktail(drink.idDrink)}
-              />
-            </div>
-          ))
-        ) : (
-          selectedLetter && (
-            <div className='noDrinksFound'>
-              <Loading
-                selectedLetter={selectedLetter}
-                text="LOADING DRINKS..."
-                message={`NO DRINKS FOUND FOR ${selectedLetter}`}
-              />
-            </div>
-          )
-        )}
-
-        {/* Renderizado del componente de paginación */}
-        {drinks.length > drinksPerPage && (
-          <Pagination page={page} setPage={setPage} isLastPage={isLastPage} />
-        )}
-      
-      </section>
+        <AlphabetButton onLetterClick={handleSelectionClick}  />
+        <SelectedDrinksSection 
+          drinks={drinks} 
+          drinksPerPage={drinksPerPage}
+          selected={selected}
+        />  
     </>
   );
-}
+};
 
-export default ByLetter;

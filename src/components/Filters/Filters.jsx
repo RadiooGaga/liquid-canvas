@@ -1,9 +1,9 @@
 import React from 'react'
+import { ByLetter } from '../../pages/ByLetter/ByLetter'
+import { ByLiquor } from '../../pages/ByLiquor/ByLiquor'
 import './Filters.css'
-import ByLetter from '../../pages/ByLetter/ByLetter'
-import ByLiquor from '../../pages/ByLiquor/ByLiquor'
 
-const Filters = () => {
+export const Filters = () => {
 
   return (
     
@@ -14,4 +14,3 @@ const Filters = () => {
   )
 }
 
-export default Filters

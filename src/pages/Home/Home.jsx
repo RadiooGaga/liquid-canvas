@@ -1,10 +1,10 @@
 import React from 'react';
-import Filters from '../../components/Filters/Filters';
+import { Filters } from '../../components/Filters/Filters';
+import { Footer } from '../../components/Footer/Footer';
 import './Home.css';
-import Footer from '../../components/Footer/Footer';
 
 
-const Home = () => {
+export const Home = () => {
 
   return (
     <>
@@ -21,5 +21,5 @@ const Home = () => {
   );
 };
 
-export default Home;
+
 

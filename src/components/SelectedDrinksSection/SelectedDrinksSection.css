@@ -1,9 +1,8 @@
 /* DESKTOP FIRST */
 
-
-.liquorsSection {
+.drinksSection {
     position: relative;
-    top: 0em;
+    top: 4em;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -13,7 +12,6 @@
     justify-content: center;
     background-color: var(--rtc--color-almostblack);
     margin-bottom: 50px;
- 
 }
 
 
@@ -23,65 +21,63 @@
 
 @media (max-width: 480px) {
 
-    .liquorsSection {
+    .drinksSection {
+        top: 13em;
         gap: 0.5em; 
-        margin-bottom: 50px;
+        padding: 0;
+        margin-bottom: 80px;
     }
 }
 
+
 @media (min-width: 481px) and (max-width: 768px) {
 
-    .liquorsSection {
+
+    .drinksSection {
+        top: 9em;
         gap: 0.5em; 
-        margin-bottom: 50px;
+        margin-bottom: 80px;
     }
+
 }
 
 
 @media (min-width: 769px) and (max-width: 1024px) {
-
-    .liquorsSection {
+    
+    .drinksSection {
+        top: 10em;
         gap: 0.8em; 
-        margin-bottom: 50px;
+        margin-bottom: 120px;
     }
 
-    .cocktailCard {
-        flex-basis: 30%;
-        padding: 10px;
-    }
 }
 
 
 @media (min-width: 1025px) and (max-width: 1280px) {
-
-    .liquorsSection {
-        position: relative;
-        top: 0em;
-        gap: 1em; 
-        margin-bottom: 50px;
-    }
     
+    .drinksSection {
+        top: 4em;
+        gap: 1em; 
+        margin-bottom: 140px;
+    }
 }
 
 
 @media (min-width: 1281px) and (max-width: 1440px) {
 
-    .liquorsSection {
-        position: relative;
-        top: 0em;
+    .drinksSection {
+        top: 5em;
         gap: 1.5em; 
-        margin-bottom: 50px;
+        margin-bottom: 140px;
     }
 }
 
 
 @media (min-width: 1921px) {
-    
-    .liquorsSection {
-        position: relative;
-        top: 0em;
-        gap: 1.5em; 
-        margin-bottom: 50px;
+
+    .drinksSection {
+        top: 14em;
+        gap: 1.8em; 
+        margin-bottom: 160px;
     }
 }
-

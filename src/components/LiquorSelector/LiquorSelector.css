@@ -1,3 +1,4 @@
+/* DESKTOP FIRST */
 
 .liquorsSelector {
     width: 80%;
@@ -31,7 +32,7 @@
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
-    
+
     .liquorsSelector {
         position: relative;
         top: 0.2em;
@@ -42,7 +43,7 @@
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-    
+   
     .liquorsSelector {
         width: 300px;
         font-size: 14px;

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Select from 'react-select';
 import './LiquorSelector.css';
 
-const LiquorSelector = ({ onLiquorClick }) => {
+export const LiquorSelector = ({ onLiquorClick }) => {
   const [liquors, setLiquors] = useState([]);
   const [selectedOption, setSelectedOption] = useState(null);
 
@@ -39,6 +39,7 @@ const LiquorSelector = ({ onLiquorClick }) => {
   };
 
   return (
+    <div className='filters'>
       <Select 
         className='liquorsSelector'
         options={options}
@@ -46,10 +47,11 @@ const LiquorSelector = ({ onLiquorClick }) => {
         onChange={handleLiquorChange}
         placeholder="SEARCH BY INGREDIENT"
       />
+    </div>
   );
 };
 
-export default LiquorSelector;
+
 
 
 

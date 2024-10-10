@@ -1,4 +1,4 @@
-.loading,.noDrinksFound {
+.error {
     font-family: var(--rtc--font-family-ultima);
     color: var(--rtc--color-superlightgreen);
     font-size: 20px;
@@ -6,36 +6,24 @@
     letter-spacing: 2px;
 }
 
-.noDrinksFound {
-    color: var(--rtc--color-supersoftpink);
-  
-}
-
-
 
 /* MEDIA QUERIES */
 
 
 @media (max-width: 480px) {
 
-    .loading,.noDrinksFound {
+    .error {
         font-size: 12px;
         margin-top: 30px;
         letter-spacing: 2px;
-    }
-    .noDrinksFound {
-        color: var(--rtc--color-supersoftpink);
-    } 
+    }  
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
 
-    .loading,.noDrinksFound {
+    .error {
         font-size: 14px;
         margin-top: 30px;
         letter-spacing: 2px;
-    }
-    .noDrinksFound {
-        color: var(--rtc--color-supersoftpink);
     }
 }

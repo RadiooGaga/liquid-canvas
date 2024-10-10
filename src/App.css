@@ -1,13 +1,13 @@
 @font-face {
     font-family: 'ultima';
-    src: url('/public/assets/fonts/ultima_pd/UltimaPDbc-UltraLightSmallC.ttf') format('truetype');
+    src: url('/assets/fonts/ultima_pd/UltimaPDbc-UltraLightSmallC.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
   font-family: 'lanear';
-  src: url('/public/assets/fonts/ultima_pd/LANENAR_.ttf') format('truetype');
+  src: url('/assets/fonts/ultima_pd/LANENAR_.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }

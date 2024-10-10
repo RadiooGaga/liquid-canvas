@@ -17,7 +17,11 @@
     height: 40px;
 }
 
+.arrowButton:hover {
+    cursor: pointer;
+}
+
 .pagination > p {
-    color: var(--rtc--color-almostwhite);
+    color: var(--rtc--color-supersoftpink);
     font-family: var(--rtc--font-family-ultima);
 }

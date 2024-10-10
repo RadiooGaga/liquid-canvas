@@ -1,20 +1,6 @@
 /* DESKTOP FIRST */
 
 
-.drinksSection {
-    position: relative;
-    top: 3em;
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    min-height: 100%;
-    padding: 30px 0px 100px;
-    gap: 1em;
-    justify-content: center;
-    background-color: var(--rtc--color-almostblack);
-    margin-bottom: 50px;
-}
-
 .cocktailCard {
     display: flex;
     flex-direction: column;
@@ -47,23 +33,13 @@
     border-radius: 3px;
 }
 
-.noDrinksFound p {
-    padding-top: 20px;
-    letter-spacing: 1px;
-}
+
 
 
 /* MEDIA QUERIES */
 
 
 @media (max-width: 480px) {
-
-    .drinksSection {
-        top: 13em;
-        gap: 0.5em; 
-        padding: 0;
-        margin-bottom: 80px;
-    }
 
     .cocktailCard {
         flex-basis: 45%;
@@ -91,12 +67,6 @@
 @media (min-width: 481px) and (max-width: 768px) {
 
 
-    .drinksSection {
-        top: 9em;
-        gap: 0.5em; 
-        margin-bottom: 80px;
-    }
-
     .cocktailCard {
         flex-basis: 45%;
         padding: 10px;
@@ -105,12 +75,6 @@
 
 
 @media (min-width: 769px) and (max-width: 1024px) {
-    
-    .drinksSection {
-        top: 10em;
-        gap: 0.8em; 
-        margin-bottom: 120px;
-    }
 
     .cocktailCard {
         flex-basis: 30%;
@@ -120,12 +84,6 @@
 
 
 @media (min-width: 1025px) and (max-width: 1280px) {
-    
-    .drinksSection {
-        top: 4em;
-        gap: 1em; 
-        margin-bottom: 140px;
-    }
 
     .cocktailCard {
         flex-basis: 22%;
@@ -146,12 +104,6 @@
 
 @media (min-width: 1281px) and (max-width: 1440px) {
 
-    .drinksSection {
-        top: 5em;
-        gap: 1.5em; 
-        margin-bottom: 140px;
-    }
-
     .cocktailCard {
         flex-basis: 23%;
         padding: 14px;
@@ -166,12 +118,6 @@
 
 @media (min-width: 1921px) {
 
-    .drinksSection {
-        top: 14em;
-        gap: 1.8em; 
-        margin-bottom: 160px;
-    }
-
     .cocktailCard {
         flex-basis: 18%;
         padding: 20px;
@@ -182,5 +128,3 @@
         font-size: 2rem;
     }
 }
-
-

@@ -1,7 +1,7 @@
 import React from 'react'
 import './About.css'
 
-const About = () => {
+export const About = () => {
   return (
 
     <section className='aboutCard'>
@@ -64,4 +64,4 @@ const About = () => {
   )
 }
 
-export default About
+
