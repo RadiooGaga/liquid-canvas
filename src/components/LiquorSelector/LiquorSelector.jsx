@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import Select from 'react-select';
 import './LiquorSelector.css';
 
@@ -31,12 +31,14 @@ export const LiquorSelector = ({ onLiquorClick }) => {
 
   
   // Manejo el cambio en el selector
-  const handleLiquorChange = (selectedOption) => {
+  const handleLiquorChange = useCallback((selectedOption) => {
     setSelectedOption(selectedOption);
     if (onLiquorClick) {
       onLiquorClick(selectedOption.value); // Pasa el valor al callback
     }
-  };
+  }, []);
+
+
 
   return (
     <div className='filters'>

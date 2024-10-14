@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Cocktail } from '../../components/CocktailDetails/CocktailDetails';
+import { CocktailDetails } from '../../../components/CocktailDetails/CocktailDetails';
 import './Random.css'
 
 
@@ -10,15 +10,15 @@ export const RandomCocktails = () => {
 
 
   const fetchData = () => {
+    setShowDesign(false)
     fetch('https://www.thecocktaildb.com/api/json/v1/1/random.php')
     .then((response) => response.json())
     .then((data) => {
       setDrinks(data.drinks[0])
-      setShowDesign(false);
     })
-
     .catch((error) => console.error('sin datos:', error));
   }
+
 
   return (
     <section>
@@ -34,7 +34,7 @@ export const RandomCocktails = () => {
       
       {drinks ? (
         <>
-        <Cocktail drinks={drinks} />
+        <CocktailDetails drinks={drinks} />
         </>
         ) : (
           <span>Loading...</span>

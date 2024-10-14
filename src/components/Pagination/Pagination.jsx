@@ -1,7 +1,8 @@
-import React, {memo} from "react";
+import React from "react";
 import './Pagination.css'
 
-export const Pagination = memo(({ page, setPage, isLastPage }) => {  
+export const Pagination = ({ page, setPage, isLastPage }) => { 
+  
   return (
     <div className="pagination">
       <button
@@ -20,6 +21,8 @@ export const Pagination = memo(({ page, setPage, isLastPage }) => {
         {">"}
       </button>
     </div>
+     
   );
-});
+  
+};
 

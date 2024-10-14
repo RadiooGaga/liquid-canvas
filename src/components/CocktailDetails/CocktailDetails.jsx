@@ -1,11 +1,11 @@
 import React from 'react'
-import './CocktailDetails.css'
 import GoBackButton from '../GoBackButton/GoBackButton';
+import './CocktailDetails.css'
 
-export const Cocktail = ({drinks}) => {
+export const CocktailDetails = React.memo(({ drinks }) => {
 
   if (!drinks) {
-    return <p>THERE´S NO COCKTAIL INFO - PAGE NOT WORKING</p>;
+    return <p>THERE'S NO COCKTAIL INFO - PAGE NOT WORKING</p>;
   }
 
   const getIngredients = () => {
@@ -69,5 +69,5 @@ export const Cocktail = ({drinks}) => {
       </>
   )
 
-}
+})
 

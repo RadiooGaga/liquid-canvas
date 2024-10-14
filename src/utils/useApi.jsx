@@ -1,60 +1,66 @@
-import { useState, useEffect, useRef } from 'react';
+import { useEffect, useReducer, useRef } from 'react';
+import { INITIAL_STATE, reducer } from './useReducer';
 
 export const useApi = ( query, searchType ) => {
-  const [drinks, setDrinks] = useState([]);  // Estado para guardar los resultados de la API
-  const [drink, setDrink ] = useState({});
-  const [loading, setLoading] = useState(false);  // Estado para controlar el loading
-  const [error, setError] = useState(null);  // Estado para controlar errores
-  const dataCache = useRef({});  // Ref para almacenar el caché
+
+    const [state, dispatch] = useReducer(reducer, INITIAL_STATE);
+    const dataCache = useRef({});
 
     useEffect(() => {
+        //Si no hay query, nos salimos.
         if (!query) {
             return
         }
 
-        // Si ya hay datos en caché, los usamos
+        // Verificar si los datos están en caché
         if (dataCache.current[query]) {
             console.log('Usando datos de caché para:', query);
-            setDrinks(dataCache.current[query].drinks || []);  
-            // Actualizar el estado de la caché
-            setDrink(dataCache.current[query].drink || {});
+            dispatch({
+              type: 'FETCH_SUCCESS',
+              payload: {
+                drinks: dataCache.current[query].drinks,
+                drink: dataCache.current[query].drink,
+                }, 
+            });
+            
             return;
         }
+            
+        // Iniciar la solicitud de datos
+        dispatch({ type: 'FETCH_INIT' });
 
-        //console.log('Query:', query, 'Search Type:', searchType);
-        setLoading(true);  
         let fetchUrl = '';
 
-        //PETICIONES SEGÚN EL QUERY
+        //PETICIONES SEGÚN QUERY
         if (searchType === 'ByLetter') {
         fetchUrl = (`https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${query}`)
         } else if (searchType === 'ByLiquor') {
         fetchUrl = (`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${query}`);
         } else if (searchType === 'ById') {
         fetchUrl = (`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${query}`);
-        } 
+        } else if (searchType === 'RandomCocktails') {
+        fetchUrl = ('https://www.thecocktaildb.com/api/json/v1/1/random.php');
+        }
 
-        //la petición
+        //la respuesta según query
         fetch(fetchUrl)
         .then((res) => res.json())
         .then((data) => {
-            const fetchedData = data.drinks || [];
-            setDrink(fetchedData[0])
-            setDrinks(fetchedData); // Actualizar el estado con los datos obtenidos
-            dataCache.current[query] = {
-                drink: fetchedData[0],
-                drinks: fetchedData
-            } // Guardar los datos en la caché
-            setLoading(false)
-            console.log(dataCache.current[query])
+        const fetchedData = data.drinks || [];
+        dataCache.current[query] = {
+            drink: fetchedData[0],
+            drinks: fetchedData,
+            };
+            dispatch({
+            type: 'FETCH_SUCCESS',
+            payload: { drinks: fetchedData, drink: fetchedData[0] },
+            });
         })
         .catch((err) => {
             console.error('Error al obtener los datos:', err);
-            setError(err)
-            setLoading(false)
-        });
-    }, [query, searchType]);
-
-
-  return { drink, drinks, loading, error };
+            dispatch({ type: 'FETCH_FAILURE', payload: err });
+            });
+        }, [query, searchType]);
+        
+    return { ...state };
 };

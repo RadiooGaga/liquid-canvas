@@ -1,26 +1,25 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import './Loading.css';
 
-export const Loading = ({  loading, selected, text, message }) => {
-
-  const [isLoading, setIsLoading] = useState(true);
+export const Loading = ({ loading, selected, text, message }) => {
+  const [showNoDrinksMessage, setShowNoDrinksMessage] = useState(false);
 
   useEffect(() => {
-    if (!loading) {
-      const timer = setTimeout(() => {
-        setIsLoading(false); 
-      }, 1500); 
-
-      return () => clearTimeout(timer); 
+    if (loading) {
+      setShowNoDrinksMessage(false);
+    } else {
+      if (!selected) return; //no hacemos nada si no hay seleccionados
+      // y no hay resultados después de cargar
+      setShowNoDrinksMessage(true);
     }
-  }, [loading]);
+  }, [loading, selected]);
 
   return (
-  <div>
-      {isLoading ? ( 
+    <div>
+      {loading ? ( 
         <div className='loading'>{text}</div>
       ) : (
-        selected && ( 
+        showNoDrinksMessage && (
           <div className='noDrinksFound'>
             {message.toUpperCase()} 
           </div>

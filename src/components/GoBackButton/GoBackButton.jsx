@@ -3,7 +3,7 @@ import './GoBackButton.css';
 
 const GoBackButton = () => {
 
-    function goBack() {
+    const goBack = () => {
         window.history.back();
     }
 

@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { Loading } from '../Loading/Loading';
 import { Pagination } from '../Pagination/Pagination';
@@ -17,9 +17,9 @@ export const SelectedDrinksSection = ({ drinks, drinksPerPage, selected }) => {
     const isLastPage = endIndex >= drinks.length; 
 
 
-    const handleIdCocktail = useCallback((idDrink) => {
+    const handleIdCocktail = ((idDrink) => {
       navigate(`/cocktail/${idDrink}`)
-    }, [navigate])
+    })
 
   return (
     <section className='drinksSection'>
@@ -40,13 +40,13 @@ export const SelectedDrinksSection = ({ drinks, drinksPerPage, selected }) => {
             message={`NO DRINKS FOUND FOR ${selected}`}
           />
         </div>
+        
       )
     )}
-
     {drinks.length > drinksPerPage && (
       <Pagination page={page} setPage={setPage} isLastPage={isLastPage} />
     )}
-  
+       {console.log('se renderiza cocktail card')}
   </section>
   )
 }

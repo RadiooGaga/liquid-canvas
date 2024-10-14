@@ -1,8 +1,8 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { useApi } from '../../utils/useApi';
-import { Cocktail } from '../../components/CocktailDetails/CocktailDetails';
-import './CocktailById.css';
+import { useApi } from '../../../utils/useApi';
+import { CocktailDetails } from '../../../components/CocktailDetails/CocktailDetails';
+
 
 
 export const CocktailById = () => {
@@ -14,11 +14,11 @@ export const CocktailById = () => {
     <>
     <div className='divCocktail'>
       {drink ? (
-        <Cocktail drinks={drink}/>  
+        <CocktailDetails drinks={drink}/>  
       ) : (
         <p>No se encontró el cóctel.</p>
       )}
-      {/*console.log({drink})*/}
+      {console.log({drink})}
     </div>
     </>
   );

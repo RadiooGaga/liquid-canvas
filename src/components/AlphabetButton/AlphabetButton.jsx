@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import { AlphabetSelector } from '../AlphabetSelector/AlfabethSelector';
 import './AlphabetButton.css';
 
@@ -7,9 +7,9 @@ export const AlphabetButton = ({ onLetterClick }) => {
 
   const [alphabetVisible, setAlphabetVisible] = useState(false);
 
-  const handleButtonClick = () => {
+  const handleButtonClick = useCallback(() => {
     setAlphabetVisible(prevState => !prevState);
-  };
+  });
 
   return (
     <div className='filters'>

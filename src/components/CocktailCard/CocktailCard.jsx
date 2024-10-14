@@ -1,8 +1,10 @@
 import React from 'react';
 import './CocktailCard.css'
 
-export const CocktailCard = ({ drink, onClick }) => {
+export const CocktailCard = React.memo(({ drink, onClick }) => {  
+
     return (
+        
         <div className='cocktailCard' onClick={onClick}>
             <h2>{drink.strDrink}</h2>
             <img
@@ -10,5 +12,6 @@ export const CocktailCard = ({ drink, onClick }) => {
                 alt={drink.strDrink}
             />
         </div>
+     
     );
-};
+});

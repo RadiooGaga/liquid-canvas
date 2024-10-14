@@ -4,10 +4,10 @@ import './App.css'
 
 import { Header } from './components/Header/Header'
 import { Home } from './pages/Home/Home';
-import { ByLetter } from './pages/ByLetter/ByLetter';
-import { CocktailById } from './pages/CocktailById/CocktailById';
-import { ByLiquor } from './pages/ByLiquor/ByLiquor';
-import { RandomCocktails } from './pages/RandomCocktails/Random'
+import { ByLetter } from './pages/Searchby/ByLetter/ByLetter';
+import { CocktailById } from './pages/Searchby/CocktailById/CocktailById';
+import { ByLiquor } from './pages/Searchby/ByLiquor/ByLiquor';
+import { RandomCocktails } from './pages/Searchby/RandomCocktails/Random'
 import { About } from './pages/About/About';
 
 
