@@ -46,7 +46,6 @@ export const SelectedDrinksSection = ({ drinks, drinksPerPage, selected }) => {
     {drinks.length > drinksPerPage && (
       <Pagination page={page} setPage={setPage} isLastPage={isLastPage} />
     )}
-       {console.log('se renderiza cocktail card')}
   </section>
   )
 }
