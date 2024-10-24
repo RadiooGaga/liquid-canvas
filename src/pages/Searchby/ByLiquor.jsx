@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { useApi } from "../../../utils/useApi";
-import { LiquorSelector } from '../../../components/LiquorSelector/LiquorSelector';
-import { SelectedDrinksSection } from '../../../components/SelectedDrinksSection/SelectedDrinksSection';
-import { Loading } from '../../../components/Loading/Loading';
-import { Error } from '../../../components/Error/Error';
+import { useApi } from "../../utils/useApi";
+import { LiquorSelector } from '../../components/LiquorSelector/LiquorSelector'
+import { SelectedDrinksSection } from "../../components/SelectedDrinksSection/SelectedDrinksSection";
+import { Loading } from "../../components/Loading/Loading";
+import { Error } from "../../components/Error/Error";
 
 
 export const ByLiquor= () => {
@@ -15,7 +15,6 @@ export const ByLiquor= () => {
   const drinksPerPage = 10;
 
   const { drinks, loading, error } = useApi(liquor, 'ByLiquor');
-
 
   const handleSelectionClick = (liquor) => {
     setSelected(liquor);
@@ -45,31 +44,3 @@ export const ByLiquor= () => {
     </>
   );
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

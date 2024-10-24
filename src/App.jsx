@@ -4,12 +4,12 @@ import './App.css'
 
 import { Header } from './components/Header/Header'
 import { Home } from './pages/Home/Home';
-import { ByLetter } from './pages/Searchby/ByLetter/ByLetter';
-import { CocktailById } from './pages/Searchby/CocktailById/CocktailById';
-import { ByLiquor } from './pages/Searchby/ByLiquor/ByLiquor';
-import { RandomCocktails } from './pages/Searchby/RandomCocktails/Random'
+import { Random } from './pages/Searchby/Random';
 import { About } from './pages/About/About';
-
+import { ByLetter } from './pages/Searchby/ByLetter';
+import { LiquorSelector } from './components/LiquorSelector/LiquorSelector';
+import { ByLiquor } from './pages/Searchby/ByLiquor';
+import { CocktailById } from './pages/Searchby/CocktailById';
 
 
 
@@ -20,11 +20,12 @@ export const App = () => {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/cocktails/:letter" element={<ByLetter />} />
-          <Route path="/cocktail/:idDrink" element={<CocktailById />} />
-          <Route path="/cocktails/liquor/:liquor" element={<ByLiquor/>} />{/* ¡NO MODIFICAR!!*/}
-          <Route path="/cocktails" element={<RandomCocktails />} />
+          <Route path="/cocktails" element={<Random />} />
           <Route path="/about" element={<About />} />
+          <Route path="/cocktails/:letter" element={<ByLetter />} />
+          <Route path="/cocktails/liquor/:liquor" element={<ByLiquor/>} />
+          <Route path="/liquors/:list" element={<LiquorSelector />} />
+          <Route path="/cocktail/:idDrink" element={<CocktailById />} />      
         </Routes>
       </div>
   )

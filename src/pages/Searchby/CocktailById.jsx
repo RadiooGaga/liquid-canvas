@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { useApi } from '../../../utils/useApi';
-import { CocktailDetails } from '../../../components/CocktailDetails/CocktailDetails';
+import { useApi } from '../../utils/useApi';
+import { CocktailDetails } from '../../components/CocktailDetails/CocktailDetails';
 
 
 
@@ -23,6 +23,3 @@ export const CocktailById = () => {
     </>
   );
 };
-
-
-

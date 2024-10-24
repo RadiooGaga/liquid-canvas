@@ -1,56 +1,75 @@
 import { useEffect, useReducer, useRef } from 'react';
 import { INITIAL_STATE, reducer } from './useReducer';
 
-export const useApi = ( query, searchType ) => {
+export const useApi = ( query, searchType, randomTrigger ) => {
 
     const [state, dispatch] = useReducer(reducer, INITIAL_STATE);
     const dataCache = useRef({});
 
     useEffect(() => {
-        //Si no hay query, nos salimos.
-        if (!query) {
-            return
+        // Si no hay query y no es tipo 'Random', nos salimos.
+        if (searchType !== 'Random' && !query) {
+        return;
+        }
+     
+        const getFetchUrl = (searchType, query) => {
+            const baseUrl = 'https://www.thecocktaildb.com/api/json/v1/1/'
+            switch (searchType) {
+                case 'ByLetter':
+                    return `${baseUrl}search.php?f=${query}`;
+                case 'ByLiquor':
+                    return `${baseUrl}filter.php?i=${query}`;
+                case 'ById':
+                    return `${baseUrl}lookup.php?i=${query}`;
+                case 'Random':
+                    return `${baseUrl}random.php`;
+                case 'ListOfLiquors':
+                    return `${baseUrl}list.php?i=list`;
+                default:
+                    console.error('Tipo de búsqueda no válido:', searchType);
+                    return null;
+            }
+        };
+
+        // Obtener la URL y si no hay, salimos
+        const fetchUrl = getFetchUrl(searchType, query);
+        if (!fetchUrl) {
+            return; 
         }
 
-        // Verificar si los datos están en caché
-        if (dataCache.current[query]) {
-            console.log('Usando datos de caché para:', query);
+        // clave única para la caché
+        const cacheKey = `${searchType}-${query}`;
+
+      
+        // Verifico si los datos están en caché (excepto para búsquedas aleatorias)
+        if (searchType !== 'Random' && dataCache.current[cacheKey]) {
+            console.log('Usando datos de caché para:', cacheKey);
             dispatch({
-              type: 'FETCH_SUCCESS',
-              payload: {
-                drinks: dataCache.current[query].drinks,
-                drink: dataCache.current[query].drink,
+                type: 'FETCH_SUCCESS',
+                payload: {
+                    drinks: dataCache.current[cacheKey].drinks,
+                    drink: dataCache.current[cacheKey].drink,
                 }, 
             });
             
             return;
         }
-            
+
         // Iniciar la solicitud de datos
         dispatch({ type: 'FETCH_INIT' });
 
-        let fetchUrl = '';
-
-        //PETICIONES SEGÚN QUERY
-        if (searchType === 'ByLetter') {
-        fetchUrl = (`https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${query}`)
-        } else if (searchType === 'ByLiquor') {
-        fetchUrl = (`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${query}`);
-        } else if (searchType === 'ById') {
-        fetchUrl = (`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${query}`);
-        } else if (searchType === 'RandomCocktails') {
-        fetchUrl = ('https://www.thecocktaildb.com/api/json/v1/1/random.php');
-        }
-
-        //la respuesta según query
+        // respuesta según query
         fetch(fetchUrl)
         .then((res) => res.json())
         .then((data) => {
         const fetchedData = data.drinks || [];
-        dataCache.current[query] = {
-            drink: fetchedData[0],
-            drinks: fetchedData,
+          // Guardar en caché si no es una búsqueda aleatoria
+          if (searchType !== 'Random') {
+            dataCache.current[cacheKey] = {
+                drink: fetchedData[0],
+                drinks: fetchedData,
             };
+        }
             dispatch({
             type: 'FETCH_SUCCESS',
             payload: { drinks: fetchedData, drink: fetchedData[0] },
@@ -60,7 +79,7 @@ export const useApi = ( query, searchType ) => {
             console.error('Error al obtener los datos:', err);
             dispatch({ type: 'FETCH_FAILURE', payload: err });
             });
-        }, [query, searchType]);
+    }, [query, searchType, randomTrigger]);
         
     return { ...state };
 };

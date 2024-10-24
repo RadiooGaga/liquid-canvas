@@ -45,9 +45,9 @@ export const CocktailDetails = React.memo(({ drinks }) => {
             <p>{getInstructions()}</p>
             <br />
             <br />
-          <h3>Category:</h3> <p>{drinks.strCategory}</p>
+          <h3>Category:</h3> <p>{drinks?.strCategory}</p>
           <br />
-          <h3>Type of glass:</h3><p>{drinks.strGlass}</p> 
+          <h3>Type of glass:</h3><p>{drinks?.strGlass}</p> 
           <br />
           <br />
             {drinks?.strVideo ? (

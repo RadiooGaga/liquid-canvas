@@ -1,8 +1,12 @@
 .loading,.noDrinksFound {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     font-family: var(--rtc--font-family-ultima);
     color: var(--rtc--color-superlightgreen);
     font-size: 20px;
-    margin-top: 30px;
+    margin-top: 3em;
     letter-spacing: 2px;
 }
 

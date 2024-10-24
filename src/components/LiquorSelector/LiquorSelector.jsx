@@ -1,44 +1,34 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import Select from 'react-select';
+import { useApi } from '../../utils/useApi';
+import { Loading } from '../Loading/Loading';
+import { Error } from '../Error/Error';
 import './LiquorSelector.css';
 
+
 export const LiquorSelector = ({ onLiquorClick }) => {
-  const [liquors, setLiquors] = useState([]);
+
   const [selectedOption, setSelectedOption] = useState(null);
+  const { drinks, loading, error } = useApi('list', 'ListOfLiquors'); 
 
-
-  // Cargando la lista de licores desde la API
-  useEffect(() => {
-    fetch('https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list')
-      .then((res) => res.json())
-      .then((data) => {
-        const sortedLiquors = (data.drinks || []).sort((a, b) =>
-          a.strIngredient1.localeCompare(b.strIngredient1)
-        );
-        setLiquors(sortedLiquors);
-      })
-      .catch((error) => {
-        console.error('Error fetching liquors:', error);
-      });
-  }, []);
-
-
-  // Convierto licores a opciones para el Select
-  const options = liquors.map((liquor) => ({
-    value: liquor.strIngredient1,
-    label: liquor.strIngredient1,
-  }));
-
-  
-  // Manejo el cambio en el selector
   const handleLiquorChange = useCallback((selectedOption) => {
     setSelectedOption(selectedOption);
     if (onLiquorClick) {
-      onLiquorClick(selectedOption.value); // Pasa el valor al callback
+      onLiquorClick(selectedOption.value);
     }
-  }, []);
+  }, [onLiquorClick]);
 
 
+   // Opciones para el Select (ya ordenadas)
+   const options = (drinks || [])
+   .sort((a, b) => a.strIngredient1.localeCompare(b.strIngredient1)) 
+   .map((liquor) => ({
+     value: liquor.strIngredient1,
+     label: liquor.strIngredient1,
+   }));
+
+ if (loading) return <Loading text="LOADING LIQUORS" />;
+ if (error) return <Error text='ERROR FETCHING LIQUORS' />;
 
   return (
     <div className='filters'>

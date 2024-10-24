@@ -16,7 +16,7 @@ export const reducer = (state, action) => {
       return {
         ...state,
         loading: false,
-        drinks: action.payload.drinks,
+        drinks: action.payload.drinks, 
         drink: action.payload.drink,
       };
     case 'FETCH_FAILURE':

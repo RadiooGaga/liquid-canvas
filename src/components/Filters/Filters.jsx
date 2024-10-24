@@ -1,6 +1,6 @@
 import React from 'react'
-import { ByLetter } from '../../pages/Searchby/ByLetter/ByLetter'
-import { ByLiquor } from '../../pages/Searchby/ByLiquor/ByLiquor'
+import { ByLetter } from '../../pages/Searchby/ByLetter'
+import { ByLiquor } from '../../pages/Searchby/ByLiquor'
 import './Filters.css'
 
 export const Filters = () => {
