@@ -18,7 +18,7 @@ export const CocktailById = () => {
       ) : (
         <p>No se encontró el cóctel.</p>
       )}
-      {console.log({drink})}
+      {console.log(drink.strDrink)}
     </div>
     </>
   );

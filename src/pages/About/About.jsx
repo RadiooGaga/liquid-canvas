@@ -24,8 +24,6 @@ export const About = () => {
           <br />
           <br />
           <br />
-          This website was created for project number 11 (react basics), in which i designed a cocktail recipe website.
-          The data and images presented here, regarding the cocktails that appear on the website, are sourced from the free api www.thecocktaildb.com/api.php.
         </p>
       </article>
 
@@ -51,11 +49,6 @@ export const About = () => {
           <br />
           <br />
           <br />
-          Es una página creada para el proyecto número 11 (react basics), en el que
-          he diseñado una web de recetas de cócteles.
-          Los datos e imágenes que aquí presento referente a los cócteles que aparecen en la web,
-          están sacados de la free api www.thecocktaildb.com/api.php
-
         </p>
         
       </article>

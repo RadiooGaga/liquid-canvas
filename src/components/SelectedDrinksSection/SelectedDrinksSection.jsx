@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { Loading } from '../Loading/Loading';
 import { Pagination } from '../Pagination/Pagination';
@@ -14,9 +14,11 @@ export const SelectedDrinksSection = ({ drinks, drinksPerPage, selected }) => {
     const [page, setPage] = useState(1);
     const startIndex = (page - 1) * drinksPerPage;
     const endIndex = startIndex + drinksPerPage;
-    const currentDrinks = drinks.slice(startIndex, endIndex);
-    const isLastPage = endIndex >= drinks.length; 
 
+    const currentDrinks = useMemo(() => {
+      return drinks.slice(startIndex, endIndex);
+    },[drinks, startIndex, endIndex])
+    const isLastPage = endIndex >= drinks.length; 
 
     const handleIdCocktail = ((idDrink) => {
       console.log(idDrink, "el id del coctail")

@@ -29,6 +29,7 @@ export const Random = () => {
             ) : (
                 drink && <CocktailDetails drinks={drink} />
             )}
+        {console.log(drink.strDrink)}
         </div>
     )}
    </>

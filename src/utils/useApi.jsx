@@ -28,11 +28,10 @@ export const useApi = ({ endpoint, searchType, randomTrigger, url }) => {
 
         dispatch({ type: 'FETCH_INIT' }); // Inicio de solicitud de datos
 
-        fetch(urlFetch)    // respuesta según peticion
+        fetch(urlFetch)
         .then((res) => res.json())
         .then((data) => {
         const fetchedData = Array.isArray(data.drinks) ? data.drinks : [];
-        console.log(fetchedData)
           if (searchType !== 'Random') { // Guardo en caché si el tipo no es búsqueda aleatoria
             dataCache.current[cacheKey] = {
                 drink: fetchedData[0],
