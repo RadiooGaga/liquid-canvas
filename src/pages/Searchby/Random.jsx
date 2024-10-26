@@ -10,7 +10,7 @@ export const Random = () => {
 
   const [showDesign, setShowDesign] = useState(true)
   const [randomTrigger, setRandomTrigger] = useState(0);
-  const { drink, loading, error } = useApi(null, 'Random', randomTrigger)
+  const { drink, loading, error } = useApi({endpoint:'random.php', searchType: 'Random', randomTrigger})
 
   const handleFetchClick = () => {
     setShowDesign(false)

@@ -9,7 +9,7 @@ import './LiquorSelector.css';
 export const LiquorSelector = ({ onLiquorClick }) => {
 
   const [selectedOption, setSelectedOption] = useState(null);
-  const { drinks, loading, error } = useApi('list', 'ListOfLiquors'); 
+  const { drinks, loading, error } = useApi({endpoint:'list.php?i=list',searchType: 'ListOfLiquors'}); 
 
   const handleLiquorChange = useCallback((selectedOption) => {
     setSelectedOption(selectedOption);

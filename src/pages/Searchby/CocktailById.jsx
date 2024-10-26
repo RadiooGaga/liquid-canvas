@@ -8,7 +8,7 @@ import { CocktailDetails } from '../../components/CocktailDetails/CocktailDetail
 export const CocktailById = () => {
 
   const { idDrink } = useParams();
-  const { drink } = useApi(idDrink, 'ById'); 
+  const { drink } = useApi({endpoint:`lookup.php?i=${idDrink}` , searchType:'ById'}); 
 
   return (
     <>

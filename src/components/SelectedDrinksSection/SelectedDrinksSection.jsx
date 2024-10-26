@@ -5,6 +5,7 @@ import { Pagination } from '../Pagination/Pagination';
 import { CocktailCard } from '../CocktailCard/CocktailCard';
 import './SelectedDrinksSection.css'
 
+
 export const SelectedDrinksSection = ({ drinks, drinksPerPage, selected }) => {
 
     const navigate = useNavigate();
@@ -18,6 +19,7 @@ export const SelectedDrinksSection = ({ drinks, drinksPerPage, selected }) => {
 
 
     const handleIdCocktail = ((idDrink) => {
+      console.log(idDrink, "el id del coctail")
       navigate(`/cocktail/${idDrink}`)
     })
 

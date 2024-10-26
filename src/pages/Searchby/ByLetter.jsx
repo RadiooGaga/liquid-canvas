@@ -13,11 +13,11 @@ export const ByLetter = () => {
   const navigate = useNavigate();
   const drinksPerPage = 10;
 
-  const { drinks, loading, error } = useApi(letter, 'ByLetter'); 
+  const { drinks, loading, error } = useApi({endpoint:`search.php?f=${letter}`, searchType:'ByLetter'}); 
 
-  const handleSelectionClick = (letter) => {
-    setSelected(letter);
-    navigate(`/cocktails/${letter}`)
+  const handleSelectionClick = (endpoint) => {
+    setSelected(endpoint);
+    navigate(`/cocktails/${endpoint}`)
   };
 
 

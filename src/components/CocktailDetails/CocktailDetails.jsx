@@ -5,6 +5,7 @@ import './CocktailDetails.css'
 export const CocktailDetails = React.memo(({ drinks }) => {
 
   if (!drinks) {
+    console.log(drinks, "no hay bebidas")
     return <p>THERE'S NO COCKTAIL INFO - PAGE NOT WORKING</p>;
   }
 

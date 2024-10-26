@@ -6,7 +6,6 @@ import { SelectedDrinksSection } from "../../components/SelectedDrinksSection/Se
 import { Loading } from "../../components/Loading/Loading";
 import { Error } from "../../components/Error/Error";
 
-
 export const ByLiquor= () => {
 
   const { liquor } = useParams();
@@ -14,11 +13,11 @@ export const ByLiquor= () => {
   const navigate = useNavigate();
   const drinksPerPage = 10;
 
-  const { drinks, loading, error } = useApi(liquor, 'ByLiquor');
+  const { drinks, loading, error } = useApi({endpoint:`filter.php?i=${liquor}`, searchType:'ByLiquor' }); 
 
-  const handleSelectionClick = (liquor) => {
-    setSelected(liquor);
-    navigate(`/cocktails/liquor/${liquor}`) 
+  const handleSelectionClick = (endpoint) => {
+    setSelected(endpoint);
+    navigate(`/cocktails/liquor/${endpoint}`) 
   };
 
   
