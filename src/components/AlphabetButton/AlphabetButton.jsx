@@ -14,7 +14,7 @@ export const AlphabetButton = ({ onLetterClick }) => {
   return (
     <div className='filters'>
       <button className='showAlphabet' onClick={handleButtonClick}>
-        {alphabetVisible ? 'HIDE ALPHABET' : 'SEARCH BY LETTER'}
+        {alphabetVisible ? 'QUIT' : 'A-Z'}
       </button>
       {alphabetVisible && (
         <AlphabetSelector onLetterClick={onLetterClick} />

@@ -12,8 +12,7 @@ return (
     </div>
        {showDesign && ( 
           <figure className='designDiv'>
-            <img className='design' src="/assets/pics/rbg1.jpeg" alt="randomBackground" />
-            <img className='design' src="/assets/pics/rbg2.jpeg" alt="randomBackground" />
+
           </figure>
         )}
   </section> 

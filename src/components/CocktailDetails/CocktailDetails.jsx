@@ -40,17 +40,11 @@ export const CocktailDetails = React.memo(({ drinks }) => {
             <br />
           <h3>Ingredients:</h3>
             <p>{getIngredients().join(', ')}</p>
-            <br />
-            <br />
           <h3>Instructions: </h3>
             <p>{getInstructions()}</p>
-            <br />
-            <br />
           <h3>Category:</h3> <p>{drinks?.strCategory}</p>
-          <br />
           <h3>Type of glass:</h3><p>{drinks?.strGlass}</p> 
-          <br />
-          <br />
+
             {drinks?.strVideo ? (
               <a className='watch' href={drinks?.strVideo} target="_blank" rel="noopener noreferrer">
                 Watch Video
@@ -58,8 +52,7 @@ export const CocktailDetails = React.memo(({ drinks }) => {
             ) : (
               <span>  No tutorials available</span>
             )}
-            <br />
-            <br />
+          
             <GoBackButton />
         </div>
       </div>

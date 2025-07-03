@@ -12,7 +12,7 @@ export const Home = () => {
       <figure className='homeDiv'>
           <img 
             className='coverImage' 
-            src="/assets/pics/2.jpg" 
+            src="/assets/pics/portada-liquid-canvas.jpg" 
             alt="pictureCover" 
           />  
       </figure>
