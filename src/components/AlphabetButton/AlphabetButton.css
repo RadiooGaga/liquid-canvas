@@ -19,7 +19,7 @@
     .showAlphabet {
         position: relative;
         top: 0;
-        width: 130px;
+        width: 50px;
         font-size: 10px;
     }
 }
@@ -30,7 +30,7 @@
     .showAlphabet {
         position: relative;
         top: 0.2em;
-        width: 140px;    
+        width: 60px;    
     }
 }
 
