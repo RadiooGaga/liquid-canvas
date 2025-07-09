@@ -17,7 +17,7 @@ export const About = () => {
           Because, let's face it, you're now a connoisseur. You're now a gentleman or a lady of distinction. Now we appreciate, savor (and control the amount) of alcohol we consume. We look at the glass, smell what's inside, and the more colorful it is, the more we like it.
           <br />
           <br />
-          On this website, you can search through hundreds of cocktails in all colors and flavors. You can search by alphabetical order, by type of liquor, and you can even take a chance and let fate decide which cocktail you'll make, as in the random cocktail section, you'll find one at random!
+          On this website, you can search through hundreds of cocktails in all colors and flavors. You can search by alphabetical order, by type of cocktail, by type of liquor, and you can even take a chance and let fate decide which cocktail you'll make, as in the random cocktail section, you'll find one at random!
           <br />
           <br />
           Good luck!
@@ -41,8 +41,9 @@ export const About = () => {
           <br />
           <br />
           En esta web, podrás buscar entre cientos de cócteles de todos los colores y sabores.
-          Podrás buscar por orden alfabético, por tipo de licor e incluso podrás jugar a echarl a suertes
-          el cóctel que te toca preparar, ya que en la coctelería random encontrarás uno al azar!
+          Podrás buscar por orden alfabético, por tipo de cocktail, por tipo de licor e incluso podrás jugar 
+          a echar a suertes el que te toca preparar, ya que en la coctelería random encontrarás un cóctel 
+          al azar!
           <br />
           <br />
           Buena suerte!

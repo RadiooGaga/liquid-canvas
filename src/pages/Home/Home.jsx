@@ -12,7 +12,7 @@ export const Home = () => {
       <figure className='homeDiv'>
           <img 
             className='coverImage' 
-            src="/assets/pics/portada-liquid-canvas.jpg" 
+            src="/assets/pics/portada-liquid-canvas.webp" 
             alt="pictureCover" 
           />  
       </figure>
